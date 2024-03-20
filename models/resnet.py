@@ -225,6 +225,10 @@ class ResNet(nn.Module):
         return self._forward_impl(x)
 
 
+def _vgg(arch, block, layers, pretrained, progress, **kwargs):
+    model = torch.hub.load('pytorch/vision:v0.10.0', 'vgg11', pretrained=True)
+    return model
+
 def _resnet(arch, block, layers, pretrained, progress, **kwargs):
     model = ResNet(block, layers, **kwargs)
     if pretrained:
