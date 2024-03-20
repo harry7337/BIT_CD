@@ -4,15 +4,15 @@ gpus=0
 checkpoint_root=checkpoints
 data_name=LEVIR
 
-img_size=256
-batch_size=8
-lr=0.01
-max_epochs=200
-net_G=base_transformer_pos_s4_dd8
+img_size=128
+batch_size=16
+lr=0.02
+max_epochs=150
+net_G=base_transformer_pos_s4_dd8_dedim8
 #base_resnet18
 #base_transformer_pos_s4_dd8
 #base_transformer_pos_s4_dd8_dedim8
-lr_policy=linear
+lr_policy=step
 
 split=trainval
 split_val=test
